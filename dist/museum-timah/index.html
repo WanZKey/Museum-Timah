@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Meta dan link CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Timah Indonesia</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header: Navbar dan logo -->
+    <header class="header">
+        <div class="nav-container">
+            <!-- Logo museum -->
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Museum Timah" style="height:40px; width:auto; display:block;">
+            </a>
+            <!-- Tombol hamburger menu (mobile) -->
+            <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <!-- Navigasi utama -->
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active" data-page="home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/profile.html" class="nav-link" data-page="profile">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/koleksi.html" class="nav-link" data-page="collections">Koleksi</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="menu-overlay"></div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section: video background dan CTA -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="video-background">
+                    <!-- Video YouTube sebagai background -->
+                    <iframe src="https://www.youtube.com/embed/FTdGYY-gjjE?autoplay=1&mute=1&loop=1&playlist=FTdGYY-gjjE&controls=0&showinfo=0&modestbranding=1"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; encrypted-media"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Museum Timah Indonesia</h1>
+                    <p>Jelajahi warisan sejarah pertambangan timah Indonesia</p>
+                    <a href="#exhibitions" class="cta-button">Mulai Eksplorasi</a>
+                </div>
+            </section>
+
+            <!-- Section Pameran & Acara -->
+            <section id="exhibitions" class="exhibitions">
+                <h2 class="section-title">Pameran & Acara</h2>
+                <div class="exhibitions-grid">
+                    <!-- Card pameran, gambar pakai background -->
+                    <div class="exhibition-card hover-yellow">
+                        <div class="card-image" style="background: url('assets/images/sejarah_bor_timah.jpg') center center/cover no-repeat;"></div>
+                        <div class="card-content">
+                            <h3>Sejarah Museum Timah Bangka Belitung</h3>
+                            <p>Temukan perjalanan panjang industri timah di kepulauan Bangka Belitung dari masa kolonial hingga modern.</p>
+                            <div class="card-meta">Pameran Permanen • Gratis</div>
+                        </div>
+                    </div>
+                    <div class="exhibition-card hover-red">
+                        <div class="card-image" style="background: url('assets/images/alat_tambang_kuno.jpg') center center/cover no-repeat;"></div>
+                        <div class="card-content">
+                            <h3>Teknologi Penambangan</h3>
+                            <p>Evolusi teknologi penambangan timah dari tradisional hingga teknologi modern.</p>
+                            <div class="card-meta">15 September 2025 - 15 Desember 2025 • Gratis</div>
+                        </div>
+                    </div>
+                    <div class="exhibition-card hover-green">
+                        <div class="card-image" style="background: url('assets/images/kain_cual.jpg') center center/cover no-repeat;"></div>
+                        <div class="card-content">
+                            <h3>Kerajinan Timah</h3>
+                            <p>Koleksi kerajinan timah tradisional dari berbagai daerah di Indonesia.</p>
+                            <div class="card-meta">Pameran • Gratis</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Carousel Koleksi -->
+            <section class="collections">
+                <div class="carousel-container">
+                    <h2 class="section-title">Jelajahi Koleksi</h2>
+                    <button class="carousel-nav prev" onclick="scrollCarousel(-1)">‹</button>
+                    <div class="carousel" id="carousel">
+                        <!-- Item koleksi, gambar pakai background -->
+                        <div class="collection-item">
+                            <div class="collection-image" style="background: url('assets/images/alat_tambang_kuno.jpg') center center/cover no-repeat;"></div>
+                            <div class="collection-info">
+                                <h4>Peralatan Tambang Kuno</h4>
+                                <p>Koleksi alat-alat penambangan tradisional</p>
+                            </div>
+                        </div>
+                        <div class="collection-item">
+                            <div class="collection-image" style="background: url('assets/images/alat_antik.jpg') center center/cover no-repeat;"></div>
+                            <div class="collection-info">
+                                <h4>Kerajinan Antik Timah</h4>
+                                <p>Karya seni dan kerajinan timah bersejarah</p>
+                            </div>
+                        </div>
+                        <div class="collection-item">
+                            <div class="collection-image" style="background: url('assets/images/sejarah_penambangan_timah.jpg') center center/cover no-repeat;"></div>
+                            <div class="collection-info">
+                                <h4>Model Pertambangan</h4>
+                                <p>Miniatur dan diorama area pertambangan</p>
+                            </div>
+                        </div>
+                        <div class="collection-item">
+                            <div class="collection-image" style="background: url('assets/images/sejarah_bor_timah.jpg') center center/cover no-repeat;"></div>
+                            <div class="collection-info">
+                                <h4>Sejarah Eksplorasi Kapal Bor Timah</h4>
+                                <p>Arsip dan dokumen industri timah</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-nav next" onclick="scrollCarousel(1)">›</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer: alamat, kontak, sosial media -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>Alamat</h4>
+          <p>
+            Jl. Jenderal Sudirman No. 123<br>
+            Kota Pangkalpinang, Kepulauan Bangka Belitung<br>
+            Indonesia 33121
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Jam Buka</h4>
+          <p>
+            Senin - Jumat: 09:00 - 16:00<br>
+            Sabtu - Minggu: 09:00 - 18:00<br>
+            Hari Libur Nasional: Tutup
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Kontak</h4>
+          <div class="footer-kontak-info">
+            <p>
+              Telepon: (0717) 123456<br>
+              Email: info@museumtimah.ac.id
+            </p>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Media Sosial</h4>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/museumtimahindonesia/" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/MuseumTimahIndonesia/" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com/@officialtimah" target="_blank" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+ 
+    <!-- Script utama -->
+    <script src="assets/scripts/script.js"></script>
+    <script>
+    // Script untuk menu mobile (duplikat dari script.js, bisa dihapus jika sudah di file js)
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('open');
+            menuOverlay.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', navMenu.classList.contains('open'));
+        });
+        menuOverlay.addEventListener('click', function() {
+            navMenu.classList.remove('open');
+            menuOverlay.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+        // Optional: close menu on nav link click (mobile UX)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('open');
+                menuOverlay.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    });
+    </script>
+</body>
+</html>
